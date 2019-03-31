@@ -1,0 +1,216 @@
+object FrameBaseLista: TFrameBaseLista
+  Size.Width = 380.000000000000000000
+  Size.Height = 100.000000000000000000
+  Size.PlatformDefault = False
+  object rctBack: TRectangle
+    Align = Client
+    Fill.Color = xFFFDECC7
+    Size.Width = 380.000000000000000000
+    Size.Height = 100.000000000000000000
+    Size.PlatformDefault = False
+    Stroke.Kind = None
+    object rctItemLista: TRectangle
+      Align = Client
+      Fill.Color = claWhite
+      Margins.Left = 7.000000000000000000
+      Margins.Top = 7.000000000000000000
+      Margins.Right = 7.000000000000000000
+      Margins.Bottom = 7.000000000000000000
+      Size.Width = 366.000000000000000000
+      Size.Height = 86.000000000000000000
+      Size.PlatformDefault = False
+      Stroke.Kind = None
+      XRadius = 12.000000000000000000
+      YRadius = 12.000000000000000000
+      object lytItemLista: TLayout
+        Align = Client
+        Size.Width = 366.000000000000000000
+        Size.Height = 86.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lytLateral: TLayout
+          Align = Right
+          Margins.Right = 4.000000000000000000
+          Position.X = 292.000000000000000000
+          Size.Width = 70.000000000000000000
+          Size.Height = 86.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object lytBotoes: TLayout
+            Align = Bottom
+            Position.Y = 56.000000000000000000
+            Size.Width = 70.000000000000000000
+            Size.Height = 30.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object lytMais: TLayout
+              Align = Right
+              Position.X = 35.000000000000000000
+              Size.Width = 35.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object pthMais: TPath
+                Align = Center
+                Data.Path = {
+                  0E00000000000000000098410000504101000000000050410000504101000000
+                  0000504100009841010000000000304100009841010000000000304100005041
+                  010000000000A04000005041010000000000A040000030410100000000003041
+                  0000304101000000000030410000A04001000000000050410000A04001000000
+                  0000504100003041010000000000984100003041010000000000984100005041
+                  030000000000984100005041}
+                Fill.Color = claBlue
+                Size.Width = 22.000000000000000000
+                Size.Height = 22.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = claBlue
+                WrapMode = Fit
+                object speMais: TSpeedButton
+                  Align = Client
+                  Size.Width = 22.000000000000000000
+                  Size.Height = 22.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+            end
+            object lytMenos: TLayout
+              Align = Left
+              Size.Width = 35.000000000000000000
+              Size.Height = 30.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object pthMenos: TPath
+                Align = Center
+                Data.Path = {
+                  06000000000000000000984100005041010000000000A0400000504101000000
+                  0000A04000003041010000000000984100003041010000000000984100005041
+                  030000000000984100005041}
+                Fill.Color = claRed
+                Size.Width = 22.000000000000000000
+                Size.Height = 8.000000000000000000
+                Size.PlatformDefault = False
+                Stroke.Color = claRed
+                object speMenos: TSpeedButton
+                  Align = Client
+                  Size.Width = 22.000000000000000000
+                  Size.Height = 8.000000000000000000
+                  Size.PlatformDefault = False
+                end
+              end
+            end
+          end
+          object edtQtde: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Bottom
+            TabOrder = 1
+            KeyboardType = NumberPad
+            ReturnKeyType = Done
+            Text = '0'
+            TextSettings.HorzAlign = Center
+            Position.X = 8.000000000000000000
+            Position.Y = 32.000000000000000000
+            Margins.Left = 8.000000000000000000
+            Margins.Right = 8.000000000000000000
+            Size.Width = 54.000000000000000000
+            Size.Height = 24.000000000000000000
+            Size.PlatformDefault = False
+            KillFocusByReturn = True
+          end
+          object lblQtde: TLabel
+            Align = Client
+            StyledSettings = [Family, FontColor]
+            Size.Width = 70.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 16.000000000000000000
+            TextSettings.Font.StyleExt = {00070000000000000004000000}
+            TextSettings.HorzAlign = Center
+            Text = 'Qtde'
+            TabOrder = 2
+          end
+        end
+        object lytLabels: TLayout
+          Touch.GestureManager = gmGestos
+          Touch.InteractiveGestures = [LongTap]
+          Align = Client
+          Size.Width = 292.000000000000000000
+          Size.Height = 86.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          object lblTitulo: TLabel
+            Touch.GestureManager = gmGestos
+            Touch.InteractiveGestures = [LongTap]
+            Align = Top
+            StyledSettings = [Family, Style, FontColor]
+            Margins.Left = 4.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Position.X = 4.000000000000000000
+            Size.Width = 284.000000000000000000
+            Size.Height = 25.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 18.000000000000000000
+            Text = 'lblTitulo'
+            TabOrder = 0
+          end
+          object lblSubDetail1: TLabel
+            Touch.GestureManager = gmGestos
+            Touch.InteractiveGestures = [LongTap]
+            Align = Top
+            StyledSettings = [Family, Style]
+            Margins.Left = 4.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Position.X = 4.000000000000000000
+            Position.Y = 25.000000000000000000
+            Size.Width = 284.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = xFF942901
+            Text = 'lblSubDetail1'
+            TabOrder = 1
+          end
+          object lblSubDetail2: TLabel
+            Touch.GestureManager = gmGestos
+            Touch.InteractiveGestures = [LongTap]
+            Align = Top
+            StyledSettings = [Family, Style]
+            Margins.Left = 4.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Position.X = 4.000000000000000000
+            Position.Y = 45.000000000000000000
+            Size.Width = 284.000000000000000000
+            Size.Height = 20.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = xFF942901
+            Text = 'lblSubDetail2'
+            TabOrder = 2
+          end
+          object lblSubDetail3: TLabel
+            Touch.GestureManager = gmGestos
+            Touch.InteractiveGestures = [LongTap]
+            Align = Top
+            AutoSize = True
+            StyledSettings = [Family, Style]
+            Margins.Left = 4.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Position.X = 4.000000000000000000
+            Position.Y = 65.000000000000000000
+            Size.Width = 284.000000000000000000
+            Size.Height = 19.000000000000000000
+            Size.PlatformDefault = False
+            TextSettings.Font.Size = 14.000000000000000000
+            TextSettings.FontColor = xFF0BC839
+            Text = 'lblSubDetail3'
+            TabOrder = 3
+          end
+        end
+      end
+    end
+  end
+  object gmGestos: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 175
+    Top = 31
+  end
+end

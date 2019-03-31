@@ -1,0 +1,268 @@
+inherited fPedidos: TfPedidos
+  Caption = 'Meus Pedidos'
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  inherited lytBase: TLayout
+    inherited rctClient: TRectangle
+      object tbctrlMain: TksTabControl
+        Align = Client
+        TabIndex = 0
+        Size.Width = 380.000000000000000000
+        Size.Height = 570.000000000000000000
+        Size.PlatformDefault = False
+        TabPosition = ksTbpTop
+        object tbitemPedidos: TksTabItem
+          Text = 'Pedidos'
+          StandardIcon = Custom
+          TabIndex = 0
+          object lstviewPedidos: TListView
+            Touch.GestureManager = gmGestos
+            Touch.InteractiveGestures = [LongTap]
+            OnGesture = lstviewPedidosGesture
+            ItemAppearanceClassName = 'TMultiDetailItemAppearance'
+            ItemEditAppearanceClassName = 'TMultiDetailDeleteAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 380.000000000000000000
+            Size.Height = 472.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            OnDblClick = lstviewPedidosDblClick
+            OnItemClick = lstviewPedidosItemClick
+          end
+          object toolTop: TToolBar
+            Size.Width = 380.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label1: TLabel
+              Align = Contents
+              StyledSettings = [Family, Size, Style]
+              Size.Width = 380.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.FontColor = claOrangered
+              TextSettings.HorzAlign = Center
+              Text = 'Pedidos'
+              TabOrder = 1
+            end
+            object btnMenu: TButton
+              Align = Left
+              IconTintColor = claOrangered
+              Margins.Left = 4.000000000000000000
+              Position.X = 4.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'detailstoolbutton'
+              TabOrder = 0
+            end
+            object ShadowEffect1: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.300000011920929000
+              Opacity = 0.200000002980232200
+              ShadowColor = claBlack
+            end
+          end
+        end
+        object tbitemItens: TksTabItem
+          Text = 'Itens de Pedido'
+          StandardIcon = Custom
+          TabIndex = 1
+          object lstviewItens: TListView
+            Touch.GestureManager = gmGestos
+            Touch.InteractiveGestures = [LongTap]
+            OnGesture = lstviewItensGesture
+            ItemAppearanceClassName = 'TMultiDetailItemAppearance'
+            ItemEditAppearanceClassName = 'TMultiDetailDeleteAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 380.000000000000000000
+            Size.Height = 472.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            OnDblClick = lstviewItensDblClick
+          end
+          object ToolBar1: TToolBar
+            Size.Width = 380.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label2: TLabel
+              Align = Contents
+              StyledSettings = [Family, Size, Style]
+              Size.Width = 380.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.FontColor = claOrangered
+              TextSettings.HorzAlign = Center
+              Text = 'Itens de Pedido'
+              TabOrder = 1
+            end
+            object Button1: TButton
+              Align = Left
+              IconTintColor = claOrangered
+              Margins.Left = 4.000000000000000000
+              Position.X = 4.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'backtoolbutton'
+              TabOrder = 0
+              OnClick = Button1Click
+            end
+            object ShadowEffect2: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.300000011920929000
+              Opacity = 0.200000002980232200
+              ShadowColor = claBlack
+            end
+          end
+        end
+      end
+      object rctPopUpItens: TRectangle
+        Fill.Color = claWhite
+        Position.X = 16.000000000000000000
+        Position.Y = 120.000000000000000000
+        Size.Width = 345.000000000000000000
+        Size.Height = 113.000000000000000000
+        Size.PlatformDefault = False
+        XRadius = 24.000000000000000000
+        YRadius = 24.000000000000000000
+        object lytPopUpItens: TLayout
+          Align = Client
+          Size.Width = 345.000000000000000000
+          Size.Height = 113.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object btnConfQtdItem: TButton
+            Align = Bottom
+            Margins.Left = 20.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Margins.Bottom = 5.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 64.000000000000000000
+            Size.Width = 305.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            Text = 'Confirmar'
+            TintColor = claSpringgreen
+            OnClick = btnConfQtdItemClick
+          end
+          object lytBtnsAddRem: TLayout
+            Align = Top
+            Margins.Left = 20.000000000000000000
+            Margins.Top = 8.000000000000000000
+            Margins.Right = 20.000000000000000000
+            Position.X = 20.000000000000000000
+            Position.Y = 8.000000000000000000
+            Size.Width = 305.000000000000000000
+            Size.Height = 50.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object btnMenos: TButton
+              Align = Left
+              Size.Width = 73.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              Text = '-'
+              OnClick = btnMenosClick
+            end
+            object btnMais: TButton
+              Align = Right
+              Position.X = 232.000000000000000000
+              Size.Width = 73.000000000000000000
+              Size.Height = 50.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              Text = '+'
+              OnClick = btnMaisClick
+            end
+            object edtQtde: TEdit
+              Touch.InteractiveGestures = [LongTap, DoubleTap]
+              Align = Center
+              TabOrder = 2
+              ReadOnly = True
+              Text = '1'
+              TextSettings.HorzAlign = Center
+            end
+          end
+        end
+      end
+    end
+    inherited lytIconCarrinho: TLayout
+      inherited speIconCart: TSpeedButton
+        Size.Height = 48.000000000000000000
+      end
+    end
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 87
+    Top = 437
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = bindPedidos
+      FieldName = 'NOME'
+      Control = lstviewPedidos
+      FillExpressions = <
+        item
+          SourceMemberName = 'DATA'
+          ControlMemberName = 'Detail1'
+        end
+        item
+          SourceMemberName = 'VALOR_PEDIDO'
+          ControlMemberName = 'Detail3'
+        end
+        item
+          SourceMemberName = 'ID'
+          ControlMemberName = 'Detail2'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkListControlToField2: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = bindItens
+      FieldName = 'NOME'
+      Control = lstviewItens
+      FillExpressions = <
+        item
+          SourceMemberName = 'QTDE'
+          ControlMemberName = 'Detail1'
+        end
+        item
+          SourceMemberName = 'VALOR_UNITARIO'
+          ControlMemberName = 'Detail2'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+  object bindPedidos: TBindSourceDB
+    DataSet = DM.qryPedidosView
+    ScopeMappings = <>
+    Left = 48
+    Top = 504
+  end
+  object bindItens: TBindSourceDB
+    DataSet = DM.qryItensPedidoView
+    ScopeMappings = <>
+    Left = 120
+    Top = 504
+  end
+  object gmGestos: TGestureManager
+    Sensitivity = 80.000000000000000000
+    Left = 88
+    Top = 346
+  end
+end

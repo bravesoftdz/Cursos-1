@@ -1,0 +1,236 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 570
+  ClientWidth = 385
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 3
+  object TabControl1: TTabControl
+    Align = Client
+    Size.Width = 385.000000000000000000
+    Size.Height = 570.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 1
+    TabPosition = PlatformDefault
+    Sizes = (
+      385s
+      521s
+      385s
+      521s)
+    object TabItem1: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = False
+      Size.Width = 192.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Gera'#231#227'o'
+      ExplicitSize.cx = 192.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar1: TToolBar
+        Size.Width = 385.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Button1: TButton
+          Align = Right
+          Margins.Left = 4.000000000000000000
+          Margins.Top = 4.000000000000000000
+          Margins.Right = 4.000000000000000000
+          Margins.Bottom = 4.000000000000000000
+          Position.X = 300.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Text = 'Update'
+          OnClick = Button1Click
+        end
+      end
+      object ListBox1: TListBox
+        Align = Top
+        Position.Y = 48.000000000000000000
+        Size.Width = 385.000000000000000000
+        Size.Height = 217.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        DisableFocusEffect = True
+        DefaultItemStyles.ItemStyle = ''
+        DefaultItemStyles.GroupHeaderStyle = ''
+        DefaultItemStyles.GroupFooterStyle = ''
+        Viewport.Width = 385.000000000000000000
+        Viewport.Height = 217.000000000000000000
+        object ListBoxItem1: TListBoxItem
+          Size.Width = 385.000000000000000000
+          Size.Height = 39.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          object edtText1: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 0
+            Text = 'www.tdevrocks.com.br'
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 4.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Margins.Bottom = 4.000000000000000000
+            Size.Width = 377.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TextPrompt = 'Digite o texto'
+            OnChange = edtText1Change
+          end
+        end
+        object ListBoxItem4: TListBoxItem
+          Position.Y = 39.000000000000000000
+          TabOrder = 3
+          object edtText2: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Client
+            TabOrder = 0
+            Text = 'Adriano Santos'
+            Margins.Left = 4.000000000000000000
+            Margins.Top = 4.000000000000000000
+            Margins.Right = 4.000000000000000000
+            Margins.Bottom = 4.000000000000000000
+            Size.Width = 377.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+          end
+        end
+        object ListBoxItem2: TListBoxItem
+          Position.Y = 83.000000000000000000
+          TabOrder = 1
+          Text = ' Encoding'
+          object cmbEnconding: TComboBox
+            Align = Right
+            Items.Strings = (
+              'Auto'
+              'Numeric'
+              'Alphanumeric'
+              'ISO-8859-1'
+              'UTF-8 without BOM'
+              'UTF-8 with BOM')
+            ItemIndex = 0
+            Position.X = 200.000000000000000000
+            Position.Y = 6.000000000000000000
+            Size.Width = 185.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            OnChange = cmbEncondingChange
+          end
+        end
+        object ListBoxItem3: TListBoxItem
+          Position.Y = 127.000000000000000000
+          TabOrder = 2
+          Text = 'Quiet Zone'
+          object edtQuietZone: TEdit
+            Touch.InteractiveGestures = [LongTap, DoubleTap]
+            Align = Right
+            TabOrder = 0
+            Text = '4'
+            Position.X = 288.000000000000000000
+            Position.Y = 6.000000000000000000
+            Size.Width = 97.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            OnChange = edtQuietZoneChange
+          end
+        end
+      end
+      object imgQRCode: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Client
+        DisableInterpolation = True
+        Size.Width = 385.000000000000000000
+        Size.Height = 256.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object TabItem2: TTabItem
+      CustomIcon = <
+        item
+        end>
+      IsSelected = True
+      Size.Width = 193.000000000000000000
+      Size.Height = 49.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Leitura'
+      ExplicitSize.cx = 193.000000000000000000
+      ExplicitSize.cy = 49.000000000000000000
+      object ToolBar2: TToolBar
+        Size.Width = 385.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object Button2: TButton
+          Action = tkcactionLeitura
+          Align = Right
+          Enabled = True
+          ImageIndex = -1
+          Margins.Left = 4.000000000000000000
+          Margins.Top = 4.000000000000000000
+          Margins.Right = 4.000000000000000000
+          Margins.Bottom = 4.000000000000000000
+          Position.X = 300.000000000000000000
+          Position.Y = 4.000000000000000000
+          Size.Width = 81.000000000000000000
+          Size.Height = 40.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+      end
+      object Memo1: TMemo
+        Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+        DataDetectorTypes = []
+        Align = Client
+        Size.Width = 385.000000000000000000
+        Size.Height = 184.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Viewport.Width = 377.000000000000000000
+        Viewport.Height = 176.000000000000000000
+      end
+      object Image1: TImage
+        MultiResBitmap = <
+          item
+          end>
+        Align = Top
+        Position.Y = 48.000000000000000000
+        Size.Width = 385.000000000000000000
+        Size.Height = 289.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+  end
+  object FObr1: TFObr
+    Left = 24
+    Top = 120
+  end
+  object ActionList1: TActionList
+    Left = 24
+    Top = 200
+    object tkcactionLeitura: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      CustomText = 'Leitura'
+      OnDidCancelTaking = tkcactionLeituraDidCancelTaking
+      OnDidFinishTaking = tkcactionLeituraDidFinishTaking
+    end
+  end
+end

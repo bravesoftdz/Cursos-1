@@ -1,0 +1,179 @@
+inherited fEstabelecimentos: TfEstabelecimentos
+  Caption = 'FrmLayoutBase2'
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  inherited lytBase: TLayout
+    inherited rctClient: TRectangle
+      object tbCtrlMain: TksTabControl
+        Align = Client
+        Appearence.SelectedColor = claWhite
+        Appearence.BackgroundColor = xFF202020
+        Appearence.SelectedBackgroundColor = xFF3C3C3C
+        Appearence.BadgeColor = claRed
+        Appearence.Theme = ksTbDarkTabs
+        TabIndex = 0
+        Size.Width = 380.000000000000000000
+        Size.Height = 570.000000000000000000
+        Size.PlatformDefault = False
+        TabPosition = ksTbpTop
+        object ksTabItem0: TksTabItem
+          Text = 'ksTabItem0'
+          StandardIcon = Custom
+          TabIndex = 0
+          object lstViewEstabelecimentos: TListView
+            ItemAppearanceClassName = 'TDynamicAppearance'
+            ItemEditAppearanceClassName = 'TDynamicAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 380.000000000000000000
+            Size.Height = 476.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            ItemAppearance.ItemHeight = 80
+            ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Font.Size = 16.000000000000000000
+                Appearance.Font.StyleExt = {00070000000000000004000000}
+                Appearance.TextAlign = Leading
+                Appearance.TextColor = claOrangered
+                Appearance.Width = 249.000000000000000000
+                Appearance.Height = 22.000000000000000000
+                Appearance.PlaceOffset.X = 86.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Text2'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Font.Size = 14.000000000000000000
+                Appearance.TextAlign = Leading
+                Appearance.TextColor = xFF942901
+                Appearance.Width = 249.000000000000000000
+                Appearance.Height = 22.000000000000000000
+                Appearance.PlaceOffset.X = 86.000000000000000000
+                Appearance.PlaceOffset.Y = 24.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Image3'
+                AppearanceClassName = 'TImageObjectAppearance'
+                Appearance.Width = 80.000000000000000000
+                Appearance.Height = 80.000000000000000000
+                Appearance.PlaceOffset.X = 2.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Accessory4'
+                AppearanceClassName = 'TAccessoryObjectAppearance'
+                Appearance.Width = 31.000000000000000000
+                Appearance.Height = 80.000000000000000000
+                Appearance.PlaceOffset.X = 328.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Image5'
+                AppearanceClassName = 'TImageObjectAppearance'
+                Appearance.Width = 22.000000000000000000
+                Appearance.Height = 22.000000000000000000
+                Appearance.PlaceOffset.X = 306.000000000000000000
+                Appearance.PlaceOffset.Y = 56.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Image6'
+                AppearanceClassName = 'TImageObjectAppearance'
+                Appearance.Width = 22.000000000000000000
+                Appearance.Height = 22.000000000000000000
+                Appearance.PlaceOffset.X = 281.000000000000000000
+                Appearance.PlaceOffset.Y = 56.000000000000000000
+              end
+              item
+                AppearanceObjectName = 'Text7'
+                AppearanceClassName = 'TTextObjectAppearance'
+                Appearance.Font.Size = 14.000000000000000000
+                Appearance.TextAlign = Leading
+                Appearance.TextColor = xFF942901
+                Appearance.Width = 185.000000000000000000
+                Appearance.Height = 25.000000000000000000
+                Appearance.PlaceOffset.X = 86.000000000000000000
+                Appearance.PlaceOffset.Y = 55.000000000000000000
+              end>
+            ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+              item
+                AppearanceObjectName = 'Text1'
+                AppearanceClassName = 'TTextObjectAppearance'
+              end>
+            OnItemClick = lstViewEstabelecimentosItemClick
+            ShowSelection = False
+          end
+          object toolTop: TToolBar
+            Size.Width = 380.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label1: TLabel
+              Align = Contents
+              StyledSettings = [Family, Size, Style]
+              Size.Width = 380.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.FontColor = claOrangered
+              TextSettings.HorzAlign = Center
+              Text = 'Estabelecimentos'
+              TabOrder = 1
+            end
+            object btnMenu: TButton
+              Align = Left
+              IconTintColor = claOrangered
+              Margins.Left = 4.000000000000000000
+              Position.X = 4.000000000000000000
+              Size.Width = 44.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'detailstoolbutton'
+              TabOrder = 0
+              Text = 'btnMenu'
+            end
+            object ShadowEffect1: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.300000011920929000
+              Opacity = 0.200000002980232200
+              ShadowColor = claBlack
+            end
+          end
+        end
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DM.MemRestaurantes
+    ScopeMappings = <>
+    Left = 64
+    Top = 400
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 66
+    Top = 453
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      Control = lstViewEstabelecimentos
+      FillExpressions = <
+        item
+          SourceMemberName = 'fantasia'
+          ControlMemberName = 'Text1'
+        end
+        item
+          SourceMemberName = 'razao_social'
+          ControlMemberName = 'Text2'
+        end
+        item
+          SourceMemberName = 'foto_logotipo'
+          ControlMemberName = 'Image3'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

@@ -1,0 +1,104 @@
+inherited fCategorias: TfCategorias
+  Caption = 'Categorias'
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  inherited lytBase: TLayout
+    inherited rctClient: TRectangle
+      object tbCtrlMain: TksTabControl
+        Align = Client
+        Appearence.SelectedColor = claWhite
+        Appearence.BackgroundColor = xFF202020
+        Appearence.SelectedBackgroundColor = xFF3C3C3C
+        Appearence.BadgeColor = claRed
+        Appearence.Theme = ksTbDarkTabs
+        TabIndex = 0
+        Size.Width = 380.000000000000000000
+        Size.Height = 570.000000000000000000
+        Size.PlatformDefault = False
+        TabPosition = ksTbpTop
+        object tbitemLista: TksTabItem
+          Text = 'tbitemLista'
+          StandardIcon = Custom
+          TabIndex = 0
+          object lsviewLista: TListView
+            ItemAppearanceClassName = 'TImageListItemAppearance'
+            ItemEditAppearanceClassName = 'TImageListItemDeleteAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 380.000000000000000000
+            Size.Height = 476.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            ItemAppearanceObjects.ItemObjects.Text.Font.Size = 16.000000000000000000
+            ItemAppearanceObjects.ItemObjects.Text.Font.StyleExt = {00070000000000000004000000}
+            ItemAppearanceObjects.ItemObjects.Text.TextColor = claOrangered
+            OnItemClick = lsviewListaItemClick
+            ShowSelection = False
+            PullToRefresh = True
+            PullRefreshWait = True
+          end
+          object toolTop: TToolBar
+            Size.Width = 380.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object Label1: TLabel
+              Align = Contents
+              StyledSettings = [Family, Size, Style]
+              Size.Width = 380.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.FontColor = claOrangered
+              TextSettings.HorzAlign = Center
+              Text = 'Categorias'
+              TabOrder = 1
+            end
+            object btnVoltar: TButton
+              Align = Left
+              ClipChildren = True
+              IconTintColor = claOrangered
+              Margins.Left = 4.000000000000000000
+              Position.X = 4.000000000000000000
+              Size.Width = 48.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'backtoolbutton'
+              TabOrder = 0
+              OnClick = btnVoltarClick
+            end
+            object ShadowEffect1: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.300000011920929000
+              Opacity = 0.200000002980232200
+              ShadowColor = claBlack
+            end
+          end
+        end
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DM.MemCategorias
+    ScopeMappings = <>
+    Left = 40
+    Top = 448
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 40
+    Top = 501
+    object LinkListControlToField1: TLinkListControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'descricao'
+      Control = lsviewLista
+      FillExpressions = <>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+  end
+end

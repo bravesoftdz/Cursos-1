@@ -1,0 +1,502 @@
+inherited FrmInfoUsuario: TFrmInfoUsuario
+  Caption = 'FrmLayoutBase1'
+  OnCreate = FormCreate
+  DesignerMasterStyle = 3
+  inherited lytBase: TLayout
+    inherited rctClient: TRectangle
+      object lytGeral: TLayout
+        Align = Client
+        Size.Width = 380.000000000000000000
+        Size.Height = 570.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object tbCtrl: TksTabControl
+          Align = Client
+          Appearence.SelectedColor = claWhite
+          Appearence.BackgroundColor = xFF202020
+          Appearence.SelectedBackgroundColor = xFF3C3C3C
+          Appearence.BadgeColor = claRed
+          Appearence.Theme = ksTbDarkTabs
+          TabIndex = 0
+          Size.Width = 380.000000000000000000
+          Size.Height = 570.000000000000000000
+          Size.PlatformDefault = False
+          TabPosition = ksTbpTop
+          object tbitemMain: TksTabItem
+            Text = 'Main'
+            StandardIcon = Custom
+            TabIndex = 0
+            object lytTopo: TLayout
+              Align = Top
+              Position.Y = 48.000000000000000000
+              Size.Width = 380.000000000000000000
+              Size.Height = 457.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 0
+              object lytFotoDados: TLayout
+                Align = Top
+                Size.Width = 380.000000000000000000
+                Size.Height = 110.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object lytFoto: TLayout
+                  Align = Left
+                  Margins.Right = 4.000000000000000000
+                  Size.Width = 110.000000000000000000
+                  Size.Height = 110.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 0
+                  object cirFundo: TCircle
+                    Align = Client
+                    Fill.Color = claBlack
+                    Margins.Left = 4.000000000000000000
+                    Margins.Top = 6.000000000000000000
+                    Margins.Right = 4.000000000000000000
+                    Margins.Bottom = 6.000000000000000000
+                    Size.Width = 102.000000000000000000
+                    Size.Height = 98.000000000000000000
+                    Size.PlatformDefault = False
+                    Stroke.Kind = None
+                    object cirFoto: TCircle
+                      Align = Client
+                      Fill.Bitmap.WrapMode = TileStretch
+                      Fill.Kind = Bitmap
+                      Margins.Left = 2.000000000000000000
+                      Margins.Top = 2.000000000000000000
+                      Margins.Right = 2.000000000000000000
+                      Margins.Bottom = 2.000000000000000000
+                      Size.Width = 98.000000000000000000
+                      Size.Height = 94.000000000000000000
+                      Size.PlatformDefault = False
+                      Stroke.Kind = None
+                      OnClick = cirFotoClick
+                    end
+                  end
+                  object imgEscolherFoto: TImage
+                    MultiResBitmap.Height = 48
+                    MultiResBitmap.Width = 48
+                    MultiResBitmap = <
+                      item
+                        Width = 48
+                        Height = 48
+                        PNG = {
+                          89504E470D0A1A0A0000000D49484452000000300000003008060000005702F9
+                          87000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+                          0293494441546843ED994B6ED44014451B982060941D30E2B312066C83010A62
+                          C204217E4284840112828DF0992224C49C35F05900203E122001F7267EE875D5
+                          B5FB955DB613D4473A72A7FDEAD575C75657258B35FB8C33F029FC02FF8CE05D
+                          7808AEE236FC05DFC167F012DC809D30FC67A826AE614978359E1FEA45D80A3F
+                          7935B086D1F097A11AEF6DBD88B96F1B72023E82AA8FC99CF27652C5432D09EF
+                          390FBB6EE74D98A10A871809CFF35B900F2A9F41CF59F801AADEBCDD3354211D
+                          0B0B6FF3FC84D7E011689C84EFA1CF43DFC28CB4C81C8334BCF7393C0E8DD3F0
+                          23F435BCD80C5FE0AD4D5778F335F417710EFE8676FE16CCF00DBC3561F87B50
+                          CD93CAE7E23034EE43BE7F73F72741DAC0AC454978F32A348EC20B7B2F35AA01
+                          AD419FF0F4073C0543A80674287DC39B4F600835980E81E1B7A1EA1BF53A0CA1
+                          06D3BED4087F0386510D681F260F4F54135ACA2CE1896A444B982A3CE7C950CD
+                          681436DD81AA47D468F8C77B2F97510D698429C33F84ACCF481B9AAB9832FC03
+                          6863327C436F175386B7B59099E14F7ABBB802D598A8D1F0EA9B3C232D30BBE0
+                          9277D51EB6CD48787207AAF119AA8846E01EF61354E395D1F0448DA719AA88A6
+                          F01329DDC37A4BC213D58366A8229A62EF735BC7F5BADF74B4ED61CDD2F044F5
+                          A119AA88A6A4E7B9DC3D060DB587A57DC293B48F99A18A688AAA7905BBF6B07D
+                          C3133F8F374315D1145543F9B71AB5871D129EA4F39819AA88A6A81AB3680F1B
+                          44CD433354114D513566D11E36889A8766A8229AA26ABCE13D6C103507DDC5DF
+                          B3B578D31C2781EB0CE3DF5525F89A39E8CC35C66F6052D6173037916760BFF2
+                          FF3D03DF9BE341E05B735CBA8097CDF120F0A2392E31F63FBA6BC9A57AEB7285
+                          17C1DDD657A806CF29337199527BADB566008BC55F70434EC79AE4F483000000
+                          0049454E44AE426082}
+                        FileName = 
+                          'C:\Cursos\Criando aplicativos m'#243'veis\#1. Aplicativo Exemplo\mobi' +
+                          'le\img\editar_foto.png'
+                      end>
+                    Anchors = [akRight, akBottom]
+                    Position.X = 88.000000000000000000
+                    Position.Y = 88.000000000000000000
+                    Size.Width = 20.000000000000000000
+                    Size.Height = 19.000000000000000000
+                    Size.PlatformDefault = False
+                    OnClick = imgEscolherFotoClick
+                  end
+                end
+                object lytDados: TLayout
+                  Align = Client
+                  Size.Width = 266.000000000000000000
+                  Size.Height = 110.000000000000000000
+                  Size.PlatformDefault = False
+                  TabOrder = 1
+                  object lblNomeUsuario: TLabel
+                    Align = Top
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.Y = 2.000000000000000000
+                    Size.Width = 266.000000000000000000
+                    Size.Height = 23.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'lblNomeUsuario'
+                    TabOrder = 0
+                  end
+                  object lblNomeCompleto: TLabel
+                    Align = Top
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.Y = 29.000000000000000000
+                    Size.Width = 266.000000000000000000
+                    Size.Height = 23.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'lblNomeCompleto'
+                    TabOrder = 1
+                  end
+                  object lblCPF: TLabel
+                    Align = Top
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.Y = 56.000000000000000000
+                    Size.Width = 266.000000000000000000
+                    Size.Height = 23.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'lblCPF'
+                    TabOrder = 2
+                  end
+                  object lblEmail: TLabel
+                    Align = Top
+                    Margins.Top = 2.000000000000000000
+                    Margins.Bottom = 2.000000000000000000
+                    Position.Y = 83.000000000000000000
+                    Size.Width = 266.000000000000000000
+                    Size.Height = 23.000000000000000000
+                    Size.PlatformDefault = False
+                    Text = 'lblEmail'
+                    TabOrder = 3
+                  end
+                end
+              end
+            end
+            object toolSupView: TToolBar
+              Size.Width = 380.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object Label1: TLabel
+                Align = Contents
+                Size.Width = 380.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'toollabel'
+                TextSettings.HorzAlign = Center
+                Text = 'Perfil'
+                TabOrder = 1
+              end
+              object btnMenu: TButton
+                Align = Left
+                Margins.Left = 4.000000000000000000
+                Position.X = 4.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'detailstoolbutton'
+                TabOrder = 0
+                Text = 'btnMenu'
+              end
+              object btnEditar: TButton
+                Align = Right
+                Margins.Right = 4.000000000000000000
+                Position.X = 328.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'composetoolbutton'
+                TabOrder = 2
+                Text = 'Editar'
+                OnClick = btnEditarClick
+              end
+            end
+          end
+          object tbitemEdicao: TksTabItem
+            Text = 'ksTabItem0'
+            StandardIcon = Custom
+            TabIndex = 1
+            object ToolBar1: TToolBar
+              Size.Width = 380.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              TabOrder = 1
+              object Label2: TLabel
+                Align = Contents
+                Size.Width = 380.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'toollabel'
+                TextSettings.HorzAlign = Center
+                Text = 'Edi'#231#227'o'
+                TabOrder = 1
+              end
+              object btnBack: TButton
+                Align = Left
+                Margins.Left = 4.000000000000000000
+                Position.X = 4.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'backtoolbutton'
+                TabOrder = 0
+                Text = 'Voltar'
+                OnClick = btnBackClick
+              end
+              object btnSalvar: TButton
+                Align = Right
+                Margins.Right = 4.000000000000000000
+                Position.X = 328.000000000000000000
+                Size.Width = 48.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                StyleLookup = 'donetoolbutton'
+                TabOrder = 2
+                Text = 'Gravar'
+                OnClick = btnSalvarClick
+              end
+            end
+            object lsboxEdicao: TListBox
+              Align = Top
+              Position.Y = 48.000000000000000000
+              Size.Width = 380.000000000000000000
+              Size.Height = 137.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'transparentlistboxstyle'
+              TabOrder = 2
+              DisableFocusEffect = True
+              DefaultItemStyles.ItemStyle = ''
+              DefaultItemStyles.GroupHeaderStyle = ''
+              DefaultItemStyles.GroupFooterStyle = ''
+              Viewport.Width = 380.000000000000000000
+              Viewport.Height = 137.000000000000000000
+              object ListBoxItem1: TListBoxItem
+                Size.Width = 380.000000000000000000
+                Size.Height = 36.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 0
+                object edtNomeCompleto: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  TabOrder = 1
+                  KeyboardType = Alphabet
+                  ReturnKeyType = Next
+                  Margins.Left = 2.000000000000000000
+                  Margins.Top = 2.000000000000000000
+                  Margins.Right = 2.000000000000000000
+                  Margins.Bottom = 2.000000000000000000
+                  Size.Width = 376.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Nome Completo'
+                  KillFocusByReturn = True
+                end
+              end
+              object ListBoxItem2: TListBoxItem
+                Position.Y = 36.000000000000000000
+                Size.Width = 380.000000000000000000
+                Size.Height = 36.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 1
+                object edtEmail: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  TabOrder = 1
+                  KeyboardType = EmailAddress
+                  Margins.Left = 2.000000000000000000
+                  Margins.Top = 2.000000000000000000
+                  Margins.Right = 2.000000000000000000
+                  Margins.Bottom = 2.000000000000000000
+                  Size.Width = 376.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'Email'
+                  KillFocusByReturn = True
+                end
+              end
+              object ListBoxItem3: TListBoxItem
+                Position.Y = 72.000000000000000000
+                Size.Width = 380.000000000000000000
+                Size.Height = 36.000000000000000000
+                Size.PlatformDefault = False
+                TabOrder = 2
+                object edtCPF: TEdit
+                  Touch.InteractiveGestures = [LongTap, DoubleTap]
+                  Align = Client
+                  TabOrder = 1
+                  KeyboardType = NumberPad
+                  ReturnKeyType = Done
+                  FilterChar = '1234567890'
+                  Margins.Left = 2.000000000000000000
+                  Margins.Top = 2.000000000000000000
+                  Margins.Right = 2.000000000000000000
+                  Margins.Bottom = 2.000000000000000000
+                  Size.Width = 376.000000000000000000
+                  Size.Height = 32.000000000000000000
+                  Size.PlatformDefault = False
+                  TextPrompt = 'CPF'
+                  KillFocusByReturn = True
+                end
+              end
+            end
+          end
+        end
+      end
+      object rctBackground: TRectangle
+        Fill.Color = claBlack
+        Opacity = 0.500000000000000000
+        Position.X = 8.000000000000000000
+        Position.Y = 504.000000000000000000
+        Size.Width = 57.000000000000000000
+        Size.Height = 58.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+        OnClick = rctBackgroundClick
+      end
+      object rctEscolherFoto: TRectangle
+        Fill.Color = claWhite
+        Position.X = 16.000000000000000000
+        Position.Y = 128.000000000000000000
+        Size.Width = 344.000000000000000000
+        Size.Height = 169.000000000000000000
+        Size.PlatformDefault = False
+        Visible = False
+        XRadius = 10.000000000000000000
+        YRadius = 10.000000000000000000
+        object btnCamera: TButton
+          Action = actCamera
+          Align = Top
+          Enabled = True
+          ImageIndex = -1
+          Margins.Left = 8.000000000000000000
+          Margins.Top = 8.000000000000000000
+          Margins.Right = 8.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 8.000000000000000000
+          Size.Width = 328.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+        end
+        object btnGaleria: TButton
+          Action = actGaleria
+          Align = Bottom
+          Enabled = True
+          ImageIndex = -1
+          Margins.Left = 8.000000000000000000
+          Margins.Top = 8.000000000000000000
+          Margins.Right = 8.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 57.000000000000000000
+          Size.Width = 328.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+        end
+        object btnCancelar: TButton
+          Align = Bottom
+          Margins.Left = 8.000000000000000000
+          Margins.Top = 8.000000000000000000
+          Margins.Right = 8.000000000000000000
+          Margins.Bottom = 8.000000000000000000
+          Position.X = 8.000000000000000000
+          Position.Y = 117.000000000000000000
+          Size.Width = 328.000000000000000000
+          Size.Height = 44.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 2
+          Text = 'Cancelar'
+          TintColor = claTomato
+          OnClick = btnCancelarClick
+        end
+      end
+    end
+    inherited lytIconCarrinho: TLayout
+      inherited speIconCart: TSpeedButton
+        Size.Height = 48.000000000000000000
+      end
+    end
+  end
+  object actAcoes: TActionList
+    Left = 144
+    Top = 432
+    object actGaleria: TTakePhotoFromLibraryAction
+      Category = 'Media Library'
+      CustomText = 'Galeria'
+      OnDidFinishTaking = actGaleriaDidFinishTaking
+    end
+    object actCamera: TTakePhotoFromCameraAction
+      Category = 'Media Library'
+      CustomText = 'C'#226'mera'
+      OnDidFinishTaking = actCameraDidFinishTaking
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DM.memUsuario
+    ScopeMappings = <>
+    Left = 48
+    Top = 432
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 252
+    Top = 437
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'nome_usuario'
+      Component = lblNomeUsuario
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'nome_completo'
+      Component = lblNomeCompleto
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText3: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'email'
+      Component = lblEmail
+      ComponentProperty = 'Text'
+    end
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'nome_completo'
+      Control = edtNomeCompleto
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'email'
+      Control = edtEmail
+      Track = False
+    end
+    object LinkPropertyToFieldText4: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cpfcnpj'
+      Component = lblCPF
+      ComponentProperty = 'Text'
+    end
+    object LinkControlToField3: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'cpfcnpj'
+      Control = edtCPF
+      Track = False
+    end
+    object LinkPropertyToFieldFillBitmapBitmap: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'foto'
+      Component = cirFoto
+      ComponentProperty = 'Fill.Bitmap.Bitmap'
+    end
+  end
+end

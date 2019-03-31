@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2017/09/14 21:10:51.000.379,=C:\Users\adrianosantosvm\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/01 11:06:22.000.002,=C:\Users\adrianosantosvm\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/03 23:49:41.000.804,=C:\Users\adrianosantosvm\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/05 15:46:46.097,=C:\Users\adrianosantosvm\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/05 15:49:09.550,C:\Cursos\Criando aplicativos móveis\#Aula 01 - Ambiente iOS\UntMain.fmx=C:\Users\adrianosantosvm\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2018/03/05 15:49:09.550,C:\Cursos\Criando aplicativos móveis\#Aula 01 - Ambiente iOS\UntMain.pas=C:\Users\adrianosantosvm\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/03/05 15:49:18.908,C:\Cursos\Criando aplicativos móveis\#Aula 01 - Ambiente iOS\PrimeiroTeste.dproj=C:\Users\adrianosantosvm\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<PMac iOSSimulator="iPhone5"/>
+		<NoProfile iOSSimulator="iPhone5" Android="0023109677"/>
+		<PmacOS iOSSimulator="_iossimulator_EE49F575-19A6-4C5C-9F8F-D11543B76CF7"/>
+	</ActiveMobileDevice>
+</BorlandProject>

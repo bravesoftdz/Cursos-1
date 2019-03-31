@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{FD40ACD5-BC56-48B3-927B-78D79CFD2BAA}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="mobile\RestaurantesMoveis.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="servidor\servidor.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RestaurantesMoveis">
+        <MSBuild Projects="mobile\RestaurantesMoveis.dproj"/>
+    </Target>
+    <Target Name="RestaurantesMoveis:Clean">
+        <MSBuild Projects="mobile\RestaurantesMoveis.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RestaurantesMoveis:Make">
+        <MSBuild Projects="mobile\RestaurantesMoveis.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="servidor">
+        <MSBuild Projects="servidor\servidor.dproj"/>
+    </Target>
+    <Target Name="servidor:Clean">
+        <MSBuild Projects="servidor\servidor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="servidor:Make">
+        <MSBuild Projects="servidor\servidor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RestaurantesMoveis;servidor"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RestaurantesMoveis:Clean;servidor:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RestaurantesMoveis:Make;servidor:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

@@ -1,0 +1,308 @@
+inherited fCarrinho: TfCarrinho
+  Caption = 'Carrinhos de Compras'
+  OnCreate = FormCreate
+  DesignerMasterStyle = 2
+  inherited lytBase: TLayout
+    inherited rctClient: TRectangle
+      object tbctrlMain: TksTabControl
+        Align = Contents
+        TabIndex = 0
+        Size.Width = 380.000000000000000000
+        Size.Height = 570.000000000000000000
+        Size.PlatformDefault = False
+        TabPosition = ksTbpTop
+        object tbitemListagem: TksTabItem
+          Text = 'Listagem'
+          StandardIcon = Custom
+          TabIndex = 0
+          object toolTop: TToolBar
+            Size.Width = 380.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object Label1: TLabel
+              Align = Contents
+              StyledSettings = [Family, Size, Style]
+              Size.Width = 380.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.FontColor = claOrangered
+              TextSettings.HorzAlign = Center
+              Text = 'Carrinho'
+              TabOrder = 1
+            end
+            object btnMenu: TButton
+              Align = Left
+              IconTintColor = claOrangered
+              Margins.Left = 4.000000000000000000
+              Position.X = 4.000000000000000000
+              Size.Width = 44.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'detailstoolbuttonbordered'
+              TabOrder = 0
+              Text = 'btnMenu'
+            end
+            object ShadowEffect1: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.300000011920929000
+              Opacity = 0.200000002980232200
+              ShadowColor = claBlack
+            end
+          end
+          object lytPedidoCab: TLayout
+            Align = Top
+            Position.Y = 44.000000000000000000
+            Size.Width = 380.000000000000000000
+            Size.Height = 85.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            object lblNomeEstabelecimento: TLabel
+              Align = Top
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Position.Y = 5.000000000000000000
+              Size.Width = 370.000000000000000000
+              Size.Height = 21.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'lblNomeEstabelecimento'
+              TabOrder = 2
+            end
+            object lblData: TLabel
+              Align = Top
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Position.Y = 31.000000000000000000
+              Size.Width = 370.000000000000000000
+              Size.Height = 21.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'lblData'
+              TabOrder = 1
+            end
+            object lblValorPedido: TLabel
+              Align = Top
+              Margins.Left = 5.000000000000000000
+              Margins.Top = 5.000000000000000000
+              Margins.Right = 5.000000000000000000
+              Position.X = 5.000000000000000000
+              Position.Y = 57.000000000000000000
+              Size.Width = 370.000000000000000000
+              Size.Height = 21.000000000000000000
+              Size.PlatformDefault = False
+              Text = 'lblValorPedido'
+              TabOrder = 0
+            end
+          end
+          object lstviewItens: TListView
+            ItemAppearanceClassName = 'TMultiDetailItemAppearance'
+            ItemEditAppearanceClassName = 'TMultiDetailDeleteAppearance'
+            HeaderAppearanceClassName = 'TListHeaderObjects'
+            FooterAppearanceClassName = 'TListHeaderObjects'
+            Align = Client
+            Size.Width = 380.000000000000000000
+            Size.Height = 291.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 3
+          end
+          object lytDiv: TLayout
+            Align = Top
+            Position.Y = 129.000000000000000000
+            Size.Width = 380.000000000000000000
+            Size.Height = 32.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 4
+            object rctDiv: TRectangle
+              Align = Client
+              Fill.Color = claOrangered
+              Size.Width = 380.000000000000000000
+              Size.Height = 32.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+            end
+            object lblItens: TLabel
+              Align = Client
+              StyledSettings = [Family, Size]
+              Margins.Left = 4.000000000000000000
+              Margins.Top = 4.000000000000000000
+              Margins.Right = 4.000000000000000000
+              Margins.Bottom = 4.000000000000000000
+              Size.Width = 372.000000000000000000
+              Size.Height = 24.000000000000000000
+              Size.PlatformDefault = False
+              TextSettings.Font.StyleExt = {00070000000000000004000000}
+              TextSettings.FontColor = claWhite
+              TextSettings.HorzAlign = Center
+              Text = 'Itens do Pedido'
+              TabOrder = 1
+            end
+          end
+          object lytEnvio: TLayout
+            Align = Bottom
+            Margins.Left = 10.000000000000000000
+            Margins.Top = 10.000000000000000000
+            Margins.Right = 10.000000000000000000
+            Margins.Bottom = 10.000000000000000000
+            Position.X = 10.000000000000000000
+            Position.Y = 462.000000000000000000
+            Size.Width = 360.000000000000000000
+            Size.Height = 48.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 0
+            object rctEnvio: TRectangle
+              Align = Client
+              ClipChildren = True
+              Fill.Color = claOrangered
+              Size.Width = 360.000000000000000000
+              Size.Height = 48.000000000000000000
+              Size.PlatformDefault = False
+              Stroke.Kind = None
+              XRadius = 12.000000000000000000
+              YRadius = 12.000000000000000000
+              object lblEnvio: TLabel
+                Align = Client
+                StyledSettings = [Family, Size, Style]
+                Size.Width = 360.000000000000000000
+                Size.Height = 48.000000000000000000
+                Size.PlatformDefault = False
+                TextSettings.FontColor = claWhite
+                TextSettings.HorzAlign = Center
+                Text = 'Fechar Pedido'
+                TabOrder = 0
+              end
+              object speEnvio: TSpeedButton
+                Align = Client
+                HelpType = htKeyword
+                Size.Width = 360.000000000000000000
+                Size.Height = 44.000000000000000000
+                Size.PlatformDefault = False
+                OnClick = speEnvioClick
+              end
+              object ShadowEffect2: TShadowEffect
+                Distance = 3.000000000000000000
+                Direction = 45.000000000000000000
+                Softness = 0.300000011920929000
+                Opacity = 0.200000002980232200
+                ShadowColor = claBlack
+              end
+            end
+          end
+        end
+        object tbitemEnvio: TksTabItem
+          Text = 'Envio'
+          StandardIcon = Custom
+          TabIndex = 1
+          object ToolBar1: TToolBar
+            Size.Width = 380.000000000000000000
+            Size.Height = 44.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 1
+            object lblTituloFechamento: TLabel
+              Align = Contents
+              StyledSettings = [Family, Size, Style]
+              Size.Width = 380.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'toollabel'
+              TextSettings.FontColor = claOrangered
+              TextSettings.HorzAlign = Center
+              Text = 'Fechamento de Pedido'
+              TabOrder = 1
+            end
+            object btnVoltar: TButton
+              Align = Left
+              IconTintColor = claOrangered
+              Margins.Left = 4.000000000000000000
+              Position.X = 4.000000000000000000
+              Size.Width = 44.000000000000000000
+              Size.Height = 44.000000000000000000
+              Size.PlatformDefault = False
+              StyleLookup = 'backtoolbutton'
+              TabOrder = 0
+              OnClick = btnVoltarClick
+            end
+            object ShadowEffect3: TShadowEffect
+              Distance = 3.000000000000000000
+              Direction = 45.000000000000000000
+              Softness = 0.300000011920929000
+              Opacity = 0.200000002980232200
+              ShadowColor = claBlack
+            end
+          end
+          object Memo1: TMemo
+            Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+            DataDetectorTypes = []
+            Align = Client
+            Size.Width = 380.000000000000000000
+            Size.Height = 476.000000000000000000
+            Size.PlatformDefault = False
+            TabOrder = 2
+            Viewport.Width = 380.000000000000000000
+            Viewport.Height = 476.000000000000000000
+          end
+        end
+      end
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DM.qryCarrinho
+    ScopeMappings = <>
+    Left = 40
+    Top = 432
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 36
+    Top = 357
+    object LinkFillControlToField1: TLinkFillControlToField
+      Category = 'Quick Bindings'
+      Control = lstviewItens
+      Track = True
+      FillDataSource = BindSourceDB1
+      FillDisplayFieldName = 'NOME_1'
+      AutoFill = True
+      FillExpressions = <
+        item
+          SourceMemberName = 'INGREDIENTES'
+          ControlMemberName = 'Detail1'
+        end
+        item
+          SourceMemberName = 'QTDE'
+          ControlMemberName = 'Detail2'
+        end
+        item
+          SourceMemberName = 'VALOR_UNITARIO'
+          ControlMemberName = 'Detail3'
+        end>
+      FillHeaderExpressions = <>
+      FillBreakGroups = <>
+    end
+    object LinkPropertyToFieldText: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'NOME'
+      Component = lblNomeEstabelecimento
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText2: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'VALOR_PEDIDO'
+      Component = lblValorPedido
+      ComponentProperty = 'Text'
+    end
+    object LinkPropertyToFieldText3: TLinkPropertyToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'DATA'
+      Component = lblData
+      ComponentProperty = 'Text'
+    end
+  end
+end
