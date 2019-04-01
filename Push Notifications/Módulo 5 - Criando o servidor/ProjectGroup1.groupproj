@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{CB266005-601C-4A8D-BB51-AA65B47C47C9}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Mobile\MobilePush.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Desktop\PushDesktop.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="servidor_datasnap\ServidorPushDS.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="MobilePush">
+        <MSBuild Projects="Mobile\MobilePush.dproj"/>
+    </Target>
+    <Target Name="MobilePush:Clean">
+        <MSBuild Projects="Mobile\MobilePush.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MobilePush:Make">
+        <MSBuild Projects="Mobile\MobilePush.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PushDesktop">
+        <MSBuild Projects="Desktop\PushDesktop.dproj"/>
+    </Target>
+    <Target Name="PushDesktop:Clean">
+        <MSBuild Projects="Desktop\PushDesktop.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PushDesktop:Make">
+        <MSBuild Projects="Desktop\PushDesktop.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ServidorPushDS">
+        <MSBuild Projects="servidor_datasnap\ServidorPushDS.dproj"/>
+    </Target>
+    <Target Name="ServidorPushDS:Clean">
+        <MSBuild Projects="servidor_datasnap\ServidorPushDS.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ServidorPushDS:Make">
+        <MSBuild Projects="servidor_datasnap\ServidorPushDS.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="MobilePush;PushDesktop;ServidorPushDS"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="MobilePush:Clean;PushDesktop:Clean;ServidorPushDS:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="MobilePush:Make;PushDesktop:Make;ServidorPushDS:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

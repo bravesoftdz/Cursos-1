@@ -1,0 +1,113 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 570
+  ClientWidth = 380
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnActivate = FormActivate
+  DesignerMasterStyle = 3
+  object Label1: TLabel
+    Align = Top
+    Margins.Top = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Position.Y = 4.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Device Token'
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Align = Top
+    Margins.Top = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Position.Y = 125.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Device ID'
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    Align = Top
+    Margins.Top = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Position.Y = 245.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 23.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Mensagem'
+    TabOrder = 2
+  end
+  object memoDeviceToken: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Top
+    Margins.Top = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Position.Y = 35.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 82.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 372.000000000000000000
+    Viewport.Height = 74.000000000000000000
+  end
+  object memoDeviceID: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    MaxLength = 4
+    TextSettings.WordWrap = True
+    Align = Top
+    Margins.Bottom = 4.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 85.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 372.000000000000000000
+    Viewport.Height = 77.000000000000000000
+  end
+  object memoMensagem: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Align = Client
+    Margins.Top = 4.000000000000000000
+    Margins.Bottom = 4.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 246.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Viewport.Width = 372.000000000000000000
+    Viewport.Height = 238.000000000000000000
+  end
+  object Button1: TButton
+    Align = Bottom
+    Position.Y = 526.000000000000000000
+    Size.Width = 380.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Registrar'
+  end
+  object PushEvents1: TPushEvents
+    Provider = EMSProvider1
+    AutoRegisterDevice = False
+    OnDeviceTokenReceived = PushEvents1DeviceTokenReceived
+    OnPushReceived = PushEvents1PushReceived
+    Left = 256
+    Top = 56
+  end
+  object EMSProvider1: TEMSProvider
+    AndroidPush.GCMAppID = '271332362079'
+    ApiVersion = '2'
+    URLPort = 0
+    Left = 256
+    Top = 168
+  end
+end

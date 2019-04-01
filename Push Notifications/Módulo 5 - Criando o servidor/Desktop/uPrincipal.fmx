@@ -1,0 +1,149 @@
+object Form2: TForm2
+  Left = 0
+  Top = 0
+  Caption = 'Form2'
+  ClientHeight = 649
+  ClientWidth = 968
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    StyledSettings = [Family, Size, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 8.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Device Token'
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Size, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 152.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Menagem a enviar'
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    StyledSettings = [Family, Size, FontColor]
+    Position.X = 8.000000000000000000
+    Position.Y = 320.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    Text = 'Log'
+    TabOrder = 2
+  end
+  object memoToken: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      
+        'APA91bES2Qv7E5FDHpQ0zuou6tfyoE1qIKcDcMnSc0vN6JocQ3R6J5ALhQ72RMzN' +
+        'dkil9Km-TLAkO_RbHOPAyPL4v0X6F-oMcmC-h_yekymrEkHb4i7ZLKB1Mgv3LlDs' +
+        'RevgX8k4W80h')
+    TextSettings.WordWrap = True
+    Position.X = 8.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 657.000000000000000000
+    Size.Height = 113.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Viewport.Width = 653.000000000000000000
+    Viewport.Height = 109.000000000000000000
+  end
+  object memoMensagem: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      'Ol'#225' iOS...')
+    TextSettings.WordWrap = True
+    Position.X = 8.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 657.000000000000000000
+    Size.Height = 137.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 653.000000000000000000
+    Viewport.Height = 133.000000000000000000
+  end
+  object memoLog: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    TextSettings.WordWrap = True
+    Position.X = 8.000000000000000000
+    Position.Y = 344.000000000000000000
+    Size.Width = 953.000000000000000000
+    Size.Height = 297.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 5
+    Viewport.Width = 949.000000000000000000
+    Viewport.Height = 293.000000000000000000
+  end
+  object btnAndroid: TButton
+    Position.X = 680.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 6
+    Text = 'Envio Local'
+    OnClick = btnAndroidClick
+  end
+  object Button2: TButton
+    Position.X = 680.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 11
+    Text = 'Conectar'
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    Position.X = 679.000000000000000000
+    Position.Y = 224.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'Enviar'
+    OnClick = Button3Click
+  end
+  object Button4: TButton
+    Position.X = 679.000000000000000000
+    Position.Y = 272.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'Desconectar'
+    OnClick = Button4Click
+  end
+  object IdTCPClient1: TIdTCPClient
+    IOHandler = IdSSLIOHandlerSocketOpenSSL1
+    ConnectTimeout = 0
+    Host = 'gateway.sandbox.push.apple.com'
+    IPVersion = Id_IPv4
+    Port = 2195
+    ReadTimeout = -1
+    Left = 560
+    Top = 72
+  end
+  object IdSSLIOHandlerSocketOpenSSL1: TIdSSLIOHandlerSocketOpenSSL
+    Destination = 'gateway.sandbox.push.apple.com:2195'
+    Host = 'gateway.sandbox.push.apple.com'
+    MaxLineAction = maException
+    Port = 2195
+    DefaultPort = 0
+    SSLOptions.CertFile = 'certificados.pem'
+    SSLOptions.KeyFile = 'certificados.pem'
+    SSLOptions.Method = sslvSSLv23
+    SSLOptions.SSLVersions = [sslvSSLv2, sslvSSLv3, sslvTLSv1, sslvTLSv1_1, sslvTLSv1_2]
+    SSLOptions.Mode = sslmUnassigned
+    SSLOptions.VerifyMode = []
+    SSLOptions.VerifyDepth = 0
+    OnGetPassword = IdSSLIOHandlerSocketOpenSSL1GetPassword
+    Left = 560
+    Top = 144
+  end
+end
